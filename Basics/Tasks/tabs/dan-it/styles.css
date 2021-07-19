@@ -1,0 +1,37 @@
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.tabs {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tabs__list {
+    display: flex;
+}
+
+.tabs__title {
+    padding: 20px;
+    background-color: #23201D;
+    color: #937341;
+    cursor: pointer;
+}
+
+.tabs__title-active {
+    background-color:#937341 ;
+    color: #23201D;
+}
+
+.content {
+    display: none;
+}
+
+.content__active {
+    display: block;
+}
+
