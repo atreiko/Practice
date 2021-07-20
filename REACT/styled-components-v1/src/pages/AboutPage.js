@@ -20,7 +20,7 @@ const AboutPage = () => {
 }
 
 const AboutStyled = styled.section`
-
+    
 `;
 
 export default AboutPage

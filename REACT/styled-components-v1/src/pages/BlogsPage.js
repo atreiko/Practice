@@ -37,11 +37,9 @@ const BlogsPageStyled = styled.div`
         grid-template-columns: repeat(2, 1fr);
         grid-column-gap: 2rem;
         grid-row-gap: 3rem;
-        padding: 2rem 1rem;
         .blog-item {
             background-color: var(--background-dark-grey);
             padding: 1rem;
-            /* overflow: hidden; */
         }
         .image {
             width: 100%;
@@ -61,8 +59,9 @@ const BlogsPageStyled = styled.div`
         .title {
             a {
                 font-size: 1.5rem;
-                padding: .5rem 0;
+                padding: 2rem 0;
                 color: var(--white-color);
+                cursor: pointer;
                 transition: all .4s ease-in-out;
                 &:hover {
                     color: var(--primary-color);

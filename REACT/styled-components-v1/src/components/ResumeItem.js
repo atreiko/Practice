@@ -18,8 +18,24 @@ const ResumeItem = ({ year, title, subTitle, text }) => {
 
 const ResumeItemStyled = styled.div`
     display: flex;
+    &:not(:last-child) {
+        padding-bottom: 3rem;
+    }
     .left-content {
         width: 50%;
+        padding-left: 20px;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 5px;
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            border: 2px solid var(--border-color);
+            background-color: var(--background-dark-color);
+        }
         p {
             display: inline-block;
         }

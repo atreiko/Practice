@@ -6,14 +6,14 @@ import GithubIcon from '@material-ui/icons/GitHub';
 import YoutubeIcon from '@material-ui/icons/YouTube'
 
 
-const HomePage = () => {
+const HomePage = ({checked}) => {
     return (
         <HomePageStyled>
             <div className='p-particles-js'>
-                <ParticleBackground/>
+                <ParticleBackground checked={checked} />
             </div>
             <div className='typography'>
-                <h1>Hi I'm<span> Neil deGrasse Tyson</span></h1>
+                <h1>Hi, I'm <span> Neil deGrasse Tyson</span></h1>
                 <p>
                 I am an American astrophysicist, planetary scientist, author, and science communicator. 
                 Tyson studied at Harvard University, the University of Texas at Austin, and Columbia University. 
