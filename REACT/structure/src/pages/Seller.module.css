@@ -1,0 +1,66 @@
+.wrapper {
+    width: 100%;
+    margin: 0 1rem;
+}
+
+.inner {
+    display: flex;
+}
+
+.left,
+.right {
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.right {
+    background-color: rgb(225, 243, 250);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.link {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-weight: bold;
+    font-size: 1.2;
+}
+
+.paragraph {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: .875rem;
+}
+
+.delivery {
+    margin-top: 1rem;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.411);
+}
+
+
+
+
+
+
+
+

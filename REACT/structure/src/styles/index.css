@@ -1,0 +1,25 @@
+
+:root {
+    --text-color: rgba(0, 0, 0, 0.8);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: .07rem;
+}
+
+.App {
+    display: flex;
+}
+
+.routes {
+    width: 100%;
+}
+
+a.active {
+    color: firebrick;
+}
