@@ -1,37 +1,55 @@
 import React, { useState, useEffect } from 'react'
 import s from './Tabs.module.css'
-import { shops } from '../../shops'
 import Tab from './Tab';
 
-const Tabs = () => {
+const Tabs = ({ sellerData, sellerTabs }) => {
     const [toggleState, setToggleState] = useState(1)
-    const [tabTitles, setTabTitles] = useState([])
+    const [tabButtons, setTabButtons] = useState()
+    const [tabPanels, setTabPanels] = useState()
+
+    // console.log(sellerData);
+    // console.log(sellerTabs);
+
+    // useEffect(() => {
+    //     setSellerTabs(sellerData.products)
+    // }, [sellerData.products])
 
     useEffect(() => {
-        getObjects()
-    }, [])
+        setTabElements(sellerTabs)
+    }, [sellerTabs])
 
     const toggleTab = (index) => {
         setToggleState(index)
     }
 
-    const getObjects = () => {
-        const shopProducts = shops.map(({products}) => products)
-        setTabTitles(shopProducts);
+    const setTabElements = (tabs) => {
+        if (tabs) {
+            tabs.forEach(tab => {
+                setTabButtons(tab.tabs)
+                setTabPanels(tab.panels)
+            })
+        }
     }
 
-    const renderTabs = tabTitles.map((tabTitle, index) => {
-        return <Tab key={tabTitle} toggleState={toggleState} index={index + 1} toggleTab={toggleTab} title={tabTitle} />
-    })
+    console.log(tabButtons);
+    console.log(tabPanels);
+
+
+    // { sellerTabs ? sellerTabs.map((tab, index) => (
+    //     <Tab key={tab} toggleState={toggleState} index={index + 1} toggleTab={toggleTab} title={tab} />
+    // )) : 'empty' }
 
     return ( 
         <div className={s.wrapper}>
             <div className={s.buttons}>
-                {/* {renderTabs} */}
-                <div className={toggleState === 1 ? [s.btn, s.btnActive].join(' ') : s.btn} onClick={() => toggleTab(1)}>Tobacco</div>
-                <div className={toggleState === 2 ? [s.btn, s.btnActive].join(' ') : s.btn} onClick={() => toggleTab(2)}>Coal</div>
-                <div className={toggleState === 3 ? [s.btn, s.btnActive].join(' ') : s.btn} onClick={() => toggleTab(3)}>Mouthpieces</div>
-                <div className={toggleState === 4 ? [s.btn, s.btnActive].join(' ') : s.btn} onClick={() => toggleTab(4)}>Equipment</div>
+                {
+                    tabButtons ?
+                        tabButtons.map((tab, index) => {
+                            <Tab key={tab} toggleState={toggleState} index={index + 1} toggleTab={toggleTab} title={tab} /> 
+                        })
+                                :
+                        'empty'
+                }
             </div>
             <div className={s.contents}>
                 <div className={toggleState === 1 ? [s.content, s.contentActive].join(' ') : s.content}>Tobacco Content</div>
