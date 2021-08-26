@@ -23,7 +23,7 @@ const Tabs = ({ sellerData, sellerTabs }) => {
     }
 
     const setTabElements = (tabs) => {
-        if (tabs) {
+        if (!!tabs) {
             tabs.forEach(tab => {
                 setTabButtons(tab.tabs)
                 setTabPanels(tab.panels)
