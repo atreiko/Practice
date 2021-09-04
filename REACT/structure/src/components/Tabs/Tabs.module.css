@@ -1,6 +1,7 @@
 .wrapper {
     box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
+    padding: 1rem .5rem;
+    margin-top: 1rem;
 }
 
 .buttons {
@@ -44,9 +45,9 @@
 }
 
 .contents {
-    padding: 1rem;
+    /* padding: 1rem; */
     /* border: 1px solid cornflowerblue; */
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1); */
 }
 
 .content {
@@ -55,4 +56,9 @@
 
 .contentActive {
     display: block;
+}
+
+.selectsWrapper {
+    display: flex;
+    column-gap: 1rem;
 }

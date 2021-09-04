@@ -2,35 +2,25 @@ import React, { useState, useEffect } from 'react'
 import s from './Seller.module.css'
 import Tabs from '../components/Tabs/Tabs'
 import { shops } from '../shops'
+
+
 const Seller = ({ id }) => {
 	const [sellerData, setSellerData] = useState({})
-    const [sellerTabs, setSellerTabs] = useState()
-    // const [tabButtons, setTabButtons] = useState()
-    // const [tabPanels, setTabPanels] = useState()
+    const [tabButtons, setTabButtons] = useState()
+    const [accessoryTabButtons, setAccessoryTabButtons] = useState()
 
     useEffect(() => {
 		getShopById(id)
-        renderTabButtons()
-	}, [id])
+        setTabButtons(sellerData.tabs)
+        setAccessoryTabButtons(sellerData.accessory)
+	}, [id, sellerData.tabs, sellerData.accessory])
 
 	const getShopById = id => {
 		const shopId = shops.filter(shop => shop.id === id)
 		setSellerData(shopId[0])
-        setSellerTabs(shopId[0].prod)
 	}
 
-    const renderTabButtons = () => {
-        if(sellerTabs !== undefined) {
-            // setTabButtons(sellerData.tabs)
-            // setTabPanels(sellerData.panels)
-        }
-    }
-
     // console.log(sellerData);
-    // console.log(sellerTabs);
-
-    // console.log(tabButtons);
-    // console.log(tabPanels);
 
 	return (
 		<div className={s.wrapper}>
@@ -50,7 +40,7 @@ const Seller = ({ id }) => {
 					<div className={s.logo}>LOGO</div>
 				</div>
 			</div>
-			<Tabs sellerTabs={sellerTabs} sellerData={sellerData} />
+			<Tabs tabButtons={tabButtons} accessoryTabButtons={accessoryTabButtons} sellerData={sellerData} />
 		</div>
 	)
 }

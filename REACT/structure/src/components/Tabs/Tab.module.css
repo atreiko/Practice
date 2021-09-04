@@ -3,7 +3,7 @@
     width: 100%;
     padding: 1rem 2rem;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: rgba(0, 0, 0, 0.411);
     text-align: center;
     transition: all .1s linear;
@@ -16,7 +16,7 @@
 .btnActive {
     font-weight: bold;
     color: rgba(0, 0, 0, 0.411);
-    background-color: rgb(225, 243, 250);;
+    background-color: rgb(225, 243, 250);
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
