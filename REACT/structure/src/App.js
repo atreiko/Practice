@@ -10,6 +10,7 @@ function App() {
         <BrowserRouter>
           <Navigation />
           <AppRoutes />
+          
         </BrowserRouter> 
       </div>
     </div>
