@@ -5,7 +5,7 @@ import s from './BrandList.module.css'
 const BrandList = ({ product, selectBrand, toggleBrand }) => {
     const [brands, setBrands] = useState([])
     
-    console.log(product);
+    // console.log(product);
 
     useEffect(() => {
         setBrands(product)

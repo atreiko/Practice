@@ -6,12 +6,13 @@ import SellerHome from '../components/SellerHome/SellerHome'
 import { useParams } from 'react-router-dom'
 
 const Sellers = () => {
-	const { id } = useParams()
+	// const { id } = useParams()
+	const [state, setState] = useState('')
 
 	return (
 		<div className={s.wrapper}>
-			<Sidebar />
-			{id !== undefined ? <Seller id={id} /> : <SellerHome />}
+			<Sidebar setState={setState} />
+			{state !== '' ? <Seller id={state} /> : <SellerHome />}
 		</div>
 	)
 }

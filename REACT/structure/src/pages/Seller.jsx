@@ -10,17 +10,22 @@ const Seller = ({ id }) => {
     const [accessoryTabButtons, setAccessoryTabButtons] = useState()
 
     useEffect(() => {
+        // console.log(id);
 		getShopById(id)
+        // setSellerData(shops.filter(shop => shop.id === id)[0])
         setTabButtons(sellerData.tabs)
         setAccessoryTabButtons(sellerData.accessory)
-	}, [id, sellerData.tabs, sellerData.accessory])
+	}, [id])
 
 	const getShopById = id => {
 		const shopId = shops.filter(shop => shop.id === id)
+        
 		setSellerData(shopId[0])
 	}
 
-    // console.log(sellerData);
+ 
+    // console.log(sellerData.id !== undefined);
+    // console.log(id);
 
 	return (
 		<div className={s.wrapper}>
@@ -40,7 +45,7 @@ const Seller = ({ id }) => {
 					<div className={s.logo}>LOGO</div>
 				</div>
 			</div>
-			<Tabs tabButtons={tabButtons} accessoryTabButtons={accessoryTabButtons} sellerData={sellerData} />
+		{sellerData.id !== undefined	&& <Tabs tabButtons={tabButtons} accessoryTabButtons={accessoryTabButtons} sellerData={sellerData} />}
 		</div>
 	)
 }

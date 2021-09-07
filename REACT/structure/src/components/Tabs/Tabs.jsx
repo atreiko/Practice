@@ -22,24 +22,11 @@ import BrandList from '../BrandList/BrandList';
 
 const Tabs = ({ tabButtons, accessoryTabButtons, sellerData }) => {
     const [toggleState, setToggleState] = useState(1)
-    const [product, setProduct] = useState()
+    const [product, setProduct] = useState([...sellerData?.tobacco])
     const [selectBrand, setSelectBrand] = useState(1)
-    const [brand, setBrand] = useState()
-
-    useEffect(() => {
-        watchTheProduct(toggleState)
-    }, [toggleState])
-
-    const toggleTab = (index) => {
-        setToggleState(index)
-    }
-
-    const toggleBrand = (index) => {
-        setSelectBrand(index)
-        watchTheBrand(product.id)
-    }
-
+    // const [brand, setBrand] = useState()
     const watchTheProduct = (index) => {
+        
         switch (index) {
             case 1:
                 setProduct(sellerData.tobacco)
@@ -62,11 +49,26 @@ const Tabs = ({ tabButtons, accessoryTabButtons, sellerData }) => {
         }
     }
 
-    const watchTheBrand = (id) => {
-        setBrand(product.filter(p => p.id === id))
+
+
+    useEffect(() => {
+        watchTheProduct(toggleState)
+    }, [toggleState])
+
+    const toggleTab = (index) => {
+        setToggleState(index)
     }
+
+    const toggleBrand = (index) => {
+        setSelectBrand(index)
+        // watchTheBrand(product.id)
+    }
+
     
-    console.log(brand);
+    // const watchTheBrand = (id) => {
+    //     setBrand(product.filter(p => p.id === id))
+    // }
+
 
     return ( 
         <div className={s.wrapper}>
