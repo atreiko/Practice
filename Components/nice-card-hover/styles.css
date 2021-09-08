@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card {
+  position: relative;
+  height: 400px;
+  width: 320px;
+  border-radius: 15px;
+  margin: 0 2rem;
+  overflow: hidden;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  cursor: pointer;
+}
+
+.card .content {
+  height: 97%;
+  width: 97%;
+  border: 1px solid gold;
+  position: absolute;
+  left: -50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  border-radius: 15px;
+}
+
+.card .content .inner-content {
+  padding: 1rem 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card .content .inner-content .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card .content .inner-content .icons i {
+  padding: .5rem 0;
+}
+
+.card .content .inner-content h3 {
+  font-size: 1.7rem;
+  color: #f0e7b5;
+}
+
+.card:hover .content {
+  left: 50%;
+}
+
+.card-1 {
+  background: url("./img/brad-pitt.jpeg");
+}
+
+.card-2 {
+  background: url("./img/heisenberg.webp");
+}
+
+.card-3 {
+  background: url("./img/tom-shelby.jpeg");
+}
+
+.card-1, .card-2, .card-3 {
+  background-position: center center;
+  background-size: 320px;
+}
+
+.card-1:hover, .card-2:hover, .card-3:hover {
+  background-position: left;
+  background-size: 520px;
+  -webkit-box-shadow: 10px 10px 18px rgba(0, 0, 0, 0.2);
+          box-shadow: 10px 10px 18px rgba(0, 0, 0, 0.2);
+}
+/*# sourceMappingURL=styles.css.map */
