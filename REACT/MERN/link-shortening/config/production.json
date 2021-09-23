@@ -1,0 +1,6 @@
+{
+    "port": 5000,
+    "jwtSecret": "bolocode artem",
+    "mongoUri": "mongodb+srv://bolocode:3141@cluster0.gr62n.mongodb.net/app?retryWrites=true&w=majority",
+    "baseUrl" : "http://localhost:5000"
+}

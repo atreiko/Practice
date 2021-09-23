@@ -1,0 +1,15 @@
+.left {
+    background-color: darkkhaki;
+    width: 50%;
+}
+.right {
+    background-color: khaki;
+    width: 50%;
+}
+.title {
+    font-size: 3rem;
+}
+.contacts {
+    display: flex;
+    flex-direction: column;
+}
