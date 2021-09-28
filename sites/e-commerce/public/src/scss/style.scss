@@ -1,0 +1,15 @@
+
+@import 'reset.scss';
+@import 'nav.scss';
+@import 'header.scss';
+@import 'product.scss';
+@import 'collections.scss';
+@import 'footer.scss';
+@import './pages/product.scss';
+@import './pages/search.scss';
+@import './pages/404.scss';
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
