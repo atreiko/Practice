@@ -2,7 +2,7 @@
 let nav = document.querySelector('.navbar')
 
 export const createNav = () => {
-        
+
     nav.innerHTML = `
 
         <div class="nav">

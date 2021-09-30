@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing: Create Account</title>
+    <link rel="stylesheet" href="./css/signup.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
+</head>
+<body>
+    <!--? form wrapper -->
+    <div class="form-wrapper">
+        <img src="./img/loader.gif" alt="loader" class="loader">
+    
+        <div class="alert-box">
+            <img src="./img/error.png" class="alert-img" alt="alt">
+            <p class="alert-msg">Error message</p>
+        </div>
+    
+        <div class="container">
+            <img src="./img/dark-logo.png" class="logo-signup" alt="logo">
+            <div>
+                <input class="signup-input" type="text" autocomplete="off" id="name" placeholder="name">
+                <input class="signup-input" type="email" autocomplete="off" id="email" placeholder="email">
+                <input class="signup-input" type="password" autocomplete="off" id="password" placeholder="password">
+                <input class="signup-input" type="text" autocomplete="off" id="number" placeholder="number">
+                <input type="checkbox" id="terms-and-cond" class="checkbox" checked>
+                <label for="terms-and-cond">agree to our <a href="#">terms and conditions</a></label>
+                <br>
+                <input type="checkbox" id="notification" class="checkbox">
+                <label for="notifications"> recieve upcoming offers adn events mails </label>
+                <button type="submit" class="submit-btn">create account</button>
+            </div>
+            <a href="/login" class="link">already have an account? Log in here</a>
+        </div>
+    </div>
+    <!--! scripts -->
+    <script src="./js/token.js"></script>
+    <script src="./js/form.js"></script>
+
+</body>
+</html>

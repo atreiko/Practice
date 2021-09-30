@@ -1,0 +1,64 @@
+.search-results {
+    padding: 60px 0;
+}
+
+.heading {
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 400;
+    margin-bottom: 40px;
+    padding: 0 10vw;
+}
+.heading span {
+    font-weight: 700;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: auto;
+    grid-row-gap: 40px;
+}
+    /* &-info {
+        width: 100%;
+        height: 100px;
+        padding-top: 10px;
+    }
+    &-brand {
+        font-weight: 600;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+    }
+    &-short-des {
+        width: 100%;
+        height: 20px;
+        line-height: 20px;
+        overflow: hidden;
+        opacity: 0.5;
+        text-transform: capitalize;
+        margin: 5px 0;
+    }
+    .price {
+        font-weight: 700;
+        font-size: 20px;
+        &-actual {
+            margin-left: 20px;
+            opacity: .5;
+            text-decoration: line-through;
+            font-weight: 500;
+            font-size: 18px;
+        }
+    }
+}
+
+.discount-tag {
+    position: absolute;
+    background: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    color: #ff7d7d;
+    right: 10px;
+    top: 10px;
+    text-transform: capitalize;
+} */
+
