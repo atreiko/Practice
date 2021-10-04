@@ -74,6 +74,64 @@ app.post('/signup', (req, res) => {
     })
 })
 
+//? login route
+app.get('/login', (req, res) => {
+    res.sendFile(path.join(staticPath, 'login.html'))
+})
+
+app.post('/login', (req, res) => {
+    let { email, password } = req.body
+
+    if(!email.length || !password.length) {
+        return res.json({ 'alert' : 'fill all the inputs' })
+    }
+
+    db.collection('users').doc(email).get()
+        .then(user => {
+            //? if email don't exists
+            if(!user.exists) {
+                return res.json({ 'alert': 'log in email does not exists' })
+            } else {
+                bcrypt.compare(password, user.data().password, (err, result) => {
+                    if(result) {
+                        let data = user.data()
+                        return res.json({
+                            name: data.name,
+                            email: data.email,
+                            seller: data.seller,
+                        })
+                    } else {
+                        return res.json({ 'alert': 'password in incorrect' })
+                    }
+                })
+            }
+        })
+})
+
+//? seller route
+app.get('/seller', (req, res) => {
+    res.sendFile(path.join(staticPath, 'seller.html'))
+})
+
+app.post('/seller', (req, res) => {
+    let { name, about, address, number, tac, legit, email } = req.body
+    if(!name.length || !address.length || !about.length || number.length < 10 || !Number(number)) {
+        return res.json({ 'alert': 'some information(s) is/are invalid' })
+    } else if (!tac || !legit) {
+        return res.json({ 'alert': 'you must agree with our terms and conditions' })
+    } else {
+        //? update users seller status here
+        db.collection('sellers').doc(email).set(req.body)
+            .then(data => {
+                db.collection('users').doc(email).update({
+                    seller: true
+                }).then(data => {
+                        res.json(true)
+                    })
+            })
+    }
+}) 
+
 //? 404 route
 app.get('/404', (req, res) => {
     res.sendFile(path.join(staticPath, '404.html'))

@@ -1,0 +1,140 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 100%;
+    display: block;
+    padding: 0 5vw;
+    position: relative;
+    text-align: center;
+    background: #f5f5f5;
+}
+
+.logo {
+    width: 200px;
+    margin: 20px auto 30px;
+}
+
+
+/* ? become-seller */
+.become-seller {
+    text-align: left;
+    border-radius: 10px;
+    background: #fff;
+    padding: 30px;
+}
+
+.heading {
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.des {
+    margin: 20px 0;
+    text-transform: capitalize;
+    line-height: 25px;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    background: #383838;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* ? apply form */
+.apply-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.hide { /*! same for become-seller */
+    display: none;
+}
+
+.apply-form #business-name {
+    padding: 12px;
+    text-transform: capitalize;
+    border: none;
+    font-size: 14px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .08);
+    border-radius: 5px;
+    outline: none;
+    margin-top: 16px;
+}
+
+.apply-form input, textarea {
+    font-weight: 500;
+}
+
+.apply-form input:not(input[type="checkbox"]) {
+    /* width: 100%; */
+}
+
+.apply-form #number {
+    width: 98%;
+}
+
+.apply-form textarea {
+    resize: none;
+    display: block;
+    height: 35px;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin: 18px 0;
+    text-transform: capitalize;
+    color: #383838;
+    font-size: 14px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .08);
+}
+
+.checkbox-wrap {
+    display: flex;
+    position: relative;
+}
+
+.checkbox-wrap label {
+    position: absolute;
+    bottom: -8px;
+    left: 24px;
+}
+
+.submit-btn {
+    margin: 25px 0;
+    width: auto;
+    padding: 0 40px;
+    font-weight: bold;
+}
+
+/* ? product listing */
+.add-product {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.add-product-title {
+    text-transform: capitalize;
+    color: #383838;
+}
