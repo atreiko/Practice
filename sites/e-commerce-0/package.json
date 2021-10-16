@@ -7,7 +7,7 @@
     "start": "nodemon server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "bolocode",
   "license": "ISC",
   "dependencies": {
     "aws-sdk": "^2.1004.0",

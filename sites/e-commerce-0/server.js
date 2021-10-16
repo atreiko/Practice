@@ -67,7 +67,6 @@ app.get('/', (req, res) => {
 
 //? signup route
 app.get('/signup', (req, res) => {
-    console.log(res)
     res.sendFile(path.join(staticPath, 'signup.html'))
 })
 

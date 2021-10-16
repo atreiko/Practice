@@ -1,0 +1,99 @@
+
+
+.form-wrapper {
+    /* background-image: linear-gradient(to right, #000000, #242424, #444444, #666666, #8a8a8a); */
+    height: 92vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    background-color: #8a8a8a;
+    /* background-image: url('../img/endoskeleton/en14.jpg'); */
+    /* background-size: cover; */
+    position: relative;
+}
+
+
+
+.form {
+    padding: 1rem;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 10px 10px 1000px rgba(255, 255, 255, 0.5);
+    /* background-image: url('../img/endoskeleton/en9.jpg');
+    background-size: cover; */
+}
+
+.form input {
+    margin-top: 1rem;
+    font-size: 14px;
+    padding: 2px 6px;
+    outline: none;
+    letter-spacing: 1px;
+}
+
+.form div {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.checkbox {
+    -webkit-appearance: none; 
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    background: #fff;
+    border: 1px solid #fff;
+}
+.checkbox:checked {
+    background: #000;
+}
+.checkbox::after {
+    content: '';
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 100%;
+    pointer-events: none;
+    background-image: url('../img/1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: none;
+}
+.checkbox:checked::after {
+    display: block;
+}
+
+.form label {
+    position: relative;
+    bottom: -10px;
+    left: 7px;
+}
+
+.submit-btn {
+    padding: 1rem 2rem;
+    text-transform: capitalize;
+    font-family: 'Special Elite', cursive;
+    font-size: 2rem;
+    font-weight: 400;
+    color: #fff;
+    background: transparent;
+    border: 1px solid #fff;
+    transition: .3s ease-in;
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
+.submit-btn:hover {
+    background-color: #fff;
+    color: #000;
+}

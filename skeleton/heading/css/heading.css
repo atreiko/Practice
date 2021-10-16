@@ -1,0 +1,42 @@
+.heading {
+    position: relative;
+    padding: 3rem 0;
+    font-size: 3rem;
+    text-transform: capitalize;
+    font-family: 'Special Elite', cursive;
+}
+
+.heading::after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 55px;
+    left: 175px;
+    background: url('../img/2.png');
+    background-size: contain;
+    transition: .5s ease-in;
+}
+
+.heading-reverse {
+    position: relative;
+    padding: 3rem 0;
+    font-size: 3rem;
+    color: #fff;
+    text-transform: capitalize;
+    font-family: 'Special Elite', cursive;
+}
+
+.heading-reverse::after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 59px;
+    left: 175px;
+    background: url('../img/2-1.png');
+    background-size: contain;
+    transition: .5s ease-in;
+}

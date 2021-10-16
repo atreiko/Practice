@@ -1,0 +1,159 @@
+/*? --- about */
+.about {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.about::after {
+    content: '';
+    width: 100%;
+    height: 4px;
+    background-image: linear-gradient(to right, #000000, #242424, #444444, #666666, #8a8a8a);
+    position: absolute;  
+    top: 0;
+}
+
+.wrapper-about {
+    display: flex;
+    position: relative;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    line-height: 2rem;
+    text-align: left;
+}
+
+.image-container {
+    width: 50%;
+}
+
+.image-container img {
+    width: 1400px;
+    position: absolute;
+    bottom: -358px;
+    left: 160px;
+}
+
+/*? --- types */
+.types {
+    min-height: 100vh;
+    /* height: 100vh; */
+    /* overflow: hidden; */
+    position: relative;
+    /* background-color: #444444; */
+
+    background-color: #5b6467;
+    background-image: linear-gradient(315deg, #5b6467 0%, #8b939a 74%);
+
+    /* background-color: #000000;
+    background-image: linear-gradient(315deg, #000000 0%, #414141 74%); */
+
+
+    /* background-image: linear-gradient(to right, #000000, #242424, #444444, #666666, #8a8a8a); */
+}
+
+.types::after {
+    content: '';
+    width: 100%;
+    height: 4px;
+    background-image: linear-gradient(to right, #000000, #242424, #444444, #666666, #8a8a8a);
+    position: absolute;  
+}
+
+.types .container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.types .container .heading {
+    color: #fff;
+}
+
+.types-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.types-list .card {
+    width: 213px;
+    /* width: 18%; */
+    height: 350px;
+    position: relative;
+    transition: .1s ease-in;
+    border-top: 1px solid rgba(255, 255, 255, .5);
+    border-left: 1px solid rgba(255, 255, 255, .5);
+    border-radius: 15px;
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.types-list .card .card-link {
+    width: 100%;
+    height: 100%;
+}
+
+.card .img-section {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.card .img-section img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    -o-object-fit: cover;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card h4 {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    font-family: 'Special Elite', cursive;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #000;
+    background-color: rgba(255, 255, 255, .5);
+    width: 100%;
+    text-align: center;
+    padding-top: 4px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.card-btn {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    width: 120px;
+    text-align: center;
+    transform: translateX(-50%);
+    padding: .4rem .2rem;
+    font-size: 1.2rem;
+    font-family: 'Special Elite', cursive;
+    color: #fff;
+    background: transparent;
+    border: 1px solid #fff;
+    transition: .3s ease-in;
+    text-decoration: none;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.card-btn:hover {
+    background-color: rgba(0, 0, 0, .5);
+    color: #fff;
+}
+
+

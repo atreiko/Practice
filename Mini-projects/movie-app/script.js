@@ -37,7 +37,6 @@ function showMovies(movies) {
             </div>
         `;
         main.appendChild(movieEl)
-        console.log(movieEl);
     })
 }
 

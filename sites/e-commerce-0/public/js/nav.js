@@ -62,6 +62,5 @@ window.onload = () => {
         actionBtn.addEventListener('click', () => {
             location.href = '/login';
         })
-
     }
 }
