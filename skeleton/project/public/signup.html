@@ -17,24 +17,31 @@
 
     <!--? navigation -->
     <nav></nav>
-
+    <!--? loader -->
+    <img class="loader" src="./img/loader/load.gif" alt="loader">
+    <!--? alert  -->
+    <div class="alert">
+        <img src="./img/6.png" alt="alert-image">
+        <p>Error Message!</p>
+    </div>
+    <!--? form -->
     <div class="form-wrapper">
-        <form class="form">
-            <input type="email" placeholder="email">
-            <input type="text" placeholder="username">
-            <input type="password" placeholder="password">
-            <input type="password" placeholder="repeat password">
-            <div>
-                <input type="checkbox" id="terms-and-cond" class="checkbox" checked>
+        <form id="form" class="form" novalidate>
+            <input id="email" type="email" placeholder="email" autocomplete="off">
+            <input id="username" type="text" placeholder="username" autocomplete="off">
+            <input id="password" type="password" placeholder="password" autocomplete="off">
+            <input id="confirmPassword" type="password" placeholder="repeat password" autocomplete="off">
+            <fieldset>
+                <input id="terms-and-cond" type="checkbox" class="checkbox" checked>
                 <label for="terms-and-cond">agree to our <a href="#">terms and conditions</a></label>
-            </div>
+            </fieldset>
             <button class="submit-btn">submit</button>
+            <a class="link" href="/login">already have an account? Log in here</a>
         </form>
     </div>
     
-    
-
     <!--! scripts -->
     <script src="js/navbar.js"></script>
+    <script src="js/form.js"></script>
 </body>
 </html>

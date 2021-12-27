@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  padding: 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+ol {
+  width: 40vw;
+}
+
+li {
+  padding: 1rem ;
+  margin: .5rem 0;
+  box-shadow: 0 0 5px 0 rgba(59, 59, 59, 0.5);
+  border-radius: 5px;
+}
+
+h3 {
+  margin-bottom: 1rem;
+}
+
+h4 {
+  margin-bottom: .5rem;
+}
+
+button {
+  padding: .3rem;
+}
+
+.details > div {
+  line-height: 20px;
+  margin-bottom: 1rem;
+}
